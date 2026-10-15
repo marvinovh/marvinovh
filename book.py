@@ -31,6 +31,6 @@ class Book():
         self.year = date.today().year - int(value)
 
     @classmethod
-    def from_string(cls, s, sep=','):
-        title, author, year = (part.strip() for part in s.split(sep))
+    def from_string(cls, text):
+        title, author, year = text.split(', ')
         return cls(title, author, year)
